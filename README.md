@@ -1,8 +1,8 @@
-# 🎵 Chinook Sales Analysis using SQL
+# Chinook Sales Analysis using SQL
 
 ---
 
-## 📖 Overview
+## Overview
 
 This project focuses on exploring and analyzing the Chinook Music Store database using SQL.
 
@@ -20,7 +20,7 @@ The project demonstrates:
 
 ---
 
-## 🎯 Objective
+## Objective
 
 The aim of this project is to:
 
@@ -33,7 +33,7 @@ The aim of this project is to:
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 This project uses the **Chinook Music Store Database**, a sample relational database that represents a digital media store.
 
@@ -52,7 +52,7 @@ Dataset Link: [Chinook Music Database Dataset](https://www.kaggle.com/datasets/j
 
 ---
 
-## 🧠 Business Problems and Solutions
+## Business Problems and Solutions
 
 Below are the key business questions answered using SQL queries on the Chinook database.
 

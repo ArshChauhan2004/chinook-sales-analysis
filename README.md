@@ -90,7 +90,7 @@ FROM Genre;
 
 ```
 **Objective:**
-Determine how many music genres exist in the database.
+- Determine how many music genres exist in the database.
 
 ---
 
@@ -103,10 +103,36 @@ LIMIT 10;
 
 ```
 **Objective:**
-Quickly preview sample track data to understand table structure and column details.
+- Quickly preview sample track data to understand table structure and column details.
 
 ---
 
 ### 5️⃣ Number of Tracks per Genre
 
 ```sql
+SELECT g.Name AS genre_name, COUNT(t.TrackId) AS total_tracks
+FROM Genre g
+INNER JOIN Track t ON g.GenreId = t.GenreId
+GROUP BY g.Name 
+ORDER BY total_tracks DESC;
+
+```
+**Objective:**
+- Determine how many tracks belong to each genre and identify the most popular genres by number of tracks.
+
+---
+
+### 6️⃣ Top 5 Most Expensive Tracks
+
+```sql
+SELECT Name, UnitPrice
+FROM Track
+ORDER BY UnitPrice DESC
+LIMIT 5;
+
+```
+**Objective:**
+- Identify the five most expensive tracks in the database and understand pricing distribution at the top end.
+
+---
+

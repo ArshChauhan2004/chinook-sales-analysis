@@ -81,7 +81,7 @@ FROM Invoice;
 SELECT MAX(Total) AS highest_invoice
 FROM Invoice;
 
--- Total Quantity Sold
+-- Total Tracks Sold
 
 SELECT SUM(Quantity) AS total_tracks_sold
 FROM InvoiceLine;

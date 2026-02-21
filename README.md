@@ -191,3 +191,52 @@ ORDER BY total_revenue DESC;
 
 ---
 
+### 1️1. Count Total Number of Invoices
+
+```sql
+SELECT COUNT(*) AS total_invoices
+FROM Invoice;
+
+```
+**Objective:**
+- Determine the total number of invoices in the database and understand how many transactions have occurred.
+
+---
+
+### 1️2. Average Invoice Amount
+
+```sql
+SELECT ROUND(AVG(Total), 2) AS avg_invoice_amount
+FROM Invoice;
+
+```
+**Objective:**
+- Understand customer spending behavior per transaction and evaluate overall transaction size.
+
+---
+
+### 1️3. Highest Invoice Amount
+
+```sql
+SELECT MAX(Total) AS highest_invoice
+FROM Invoice;
+
+```
+**Objective:**
+- Understand the maximum transaction value and detect potential high-value customers or bulk purchases.
+
+---
+
+### 1️4. Total Quantity Sold
+
+```sql
+SELECT SUM(Quantity) AS total_tracks_sold
+FROM InvoiceLine;
+
+```
+**Objective:**
+- Measure overall sales volume and understand product demand across all transactions.
+
+---
+
+

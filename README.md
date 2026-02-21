@@ -94,3 +94,19 @@ Determine how many music genres exist in the database.
 
 ---
 
+### 4️⃣ Preview Sample Tracks
+
+```sql
+SELECT *
+FROM Track
+LIMIT 10;
+
+```
+**Objective:**
+Quickly preview sample track data to understand table structure and column details.
+
+---
+
+### 5️⃣ Number of Tracks per Genre
+
+```sql

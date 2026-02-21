@@ -43,7 +43,8 @@ The database contains information about:
 - Tracks  
 - Genres  
 - Invoices  
-- Invoice Lines (Sales details)  
+- Invoice Lines (Sales details)
+- Customers  
 
 It allows analysis of revenue, genre popularity, and customer purchasing behavior using SQL joins and aggregations.
 

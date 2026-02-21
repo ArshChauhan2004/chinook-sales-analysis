@@ -227,7 +227,7 @@ FROM Invoice;
 
 ---
 
-### 1️4. Total Quantity Sold
+### 1️4. Total Tracks Sold
 
 ```sql
 SELECT SUM(Quantity) AS total_tracks_sold
@@ -238,5 +238,4 @@ FROM InvoiceLine;
 - Measure overall sales volume and understand product demand across all transactions.
 
 ---
-
 

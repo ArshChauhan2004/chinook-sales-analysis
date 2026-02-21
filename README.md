@@ -325,3 +325,6 @@ LIMIT 3;
 
 ---
 
+## Conclusion
+
+This project demonstrates practical application of SQL concepts using a structured relational database. The analysis covers data exploration, aggregation, JOIN operations, subqueries, window functions, and time-based revenue analysis to extract meaningful business insights from sales data. Through this work, a strong understanding of relational data handling and analytical querying has been developed, forming a solid foundation for further growth in data analytics and database management.

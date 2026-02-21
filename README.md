@@ -191,7 +191,7 @@ ORDER BY total_revenue DESC;
 
 ---
 
-### 1️1. Count Total Number of Invoices
+### 11. Count Total Number of Invoices
 
 ```sql
 SELECT COUNT(*) AS total_invoices
@@ -203,7 +203,7 @@ FROM Invoice;
 
 ---
 
-### 1️2. Average Invoice Amount
+### 12. Average Invoice Amount
 
 ```sql
 SELECT ROUND(AVG(Total), 2) AS avg_invoice_amount
@@ -215,7 +215,7 @@ FROM Invoice;
 
 ---
 
-### 1️3. Highest Invoice Amount
+### 13. Highest Invoice Amount
 
 ```sql
 SELECT MAX(Total) AS highest_invoice
@@ -227,7 +227,7 @@ FROM Invoice;
 
 ---
 
-### 1️4. Total Tracks Sold
+### 14. Total Tracks Sold
 
 ```sql
 SELECT SUM(Quantity) AS total_tracks_sold
@@ -236,6 +236,92 @@ FROM InvoiceLine;
 ```
 **Objective:**
 - Measure overall sales volume and understand product demand across all transactions.
+
+---
+
+### 15. Top 5 Best Selling Tracks
+
+```sql
+SELECT t.Name, SUM(il.Quantity) AS total_sold
+FROM Track t
+INNER JOIN InvoiceLine il ON t.TrackId = il.TrackId
+GROUP BY t.Name 
+ORDER BY total_sold DESC
+LIMIT 5;
+
+```
+**Objective:**
+- Analyze which songs generate the most customer demand and support business decisions for promotions and recommendations.
+
+---
+
+### 16. Rank Tracks by Price
+
+```sql
+SELECT Name, UnitPrice,
+RANK() OVER (ORDER BY UnitPrice DESC) AS price_rank
+FROM Track;
+
+```
+**Objective:**
+- Identify the most expensive tracks in the database.
+
+---
+
+### 17. Row Number for Tracks
+
+```sql
+SELECT Name, ROW_NUMBER() 
+OVER (ORDER BY Name) AS row_num
+FROM Track;
+
+```
+**Objective:**
+- Assign a unique row number to each track and understand sequential ordering of records.
+
+---
+
+### 18. Tracks Longer Than Average
+
+```sql
+SELECT Name, Milliseconds
+FROM Track
+WHERE Milliseconds >
+(SELECT AVG(Milliseconds) FROM Track);
+
+```
+**Objective:**
+- Identify tracks whose duration is longer than the average track length and compare individual records against an aggregate value.
+
+---
+
+### 19. Revenue by Year
+
+```sql
+SELECT YEAR(InvoiceDate) AS sales_year,
+ROUND(SUM(Total),2) AS total_revenue
+FROM Invoice
+GROUP BY YEAR(InvoiceDate) 
+ORDER BY sales_year;
+
+```
+**Objective:**
+- Analyze sales trends over time and understand yearly business growth patterns.
+
+---
+
+### 20. Top 3 Countries by Revenue 
+
+```sql
+SELECT BillingCountry, ROUND(SUM(Total),2) AS revenue
+FROM Invoice
+GROUP BY BillingCountry
+ORDER BY revenue DESC
+LIMIT 3;
+
+```
+**Objective:**
+- Understand which geographic markets contribute most to total sales and support regional business strategy decisions.
 
 ---
 

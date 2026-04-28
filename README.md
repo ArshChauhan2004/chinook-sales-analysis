@@ -347,8 +347,8 @@ An interactive Power BI dashboard was built to complement the SQL analysis and v
 - Chinook-Sales-Dashboard.pbix
 - Dashboard.png
 - KPIs.png
-- Trend Line.png
-- Top customers.png
+- trend_Line.png
+- top_customers.png
 
 ### 🛠 Tools Used:
 - SQL

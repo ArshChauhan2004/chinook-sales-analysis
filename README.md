@@ -323,8 +323,44 @@ LIMIT 3;
 **Objective:**
 - Understand which geographic markets contribute most to total sales and support regional business strategy decisions.
 
+
 ---
+
+
+## 📊 Power BI Dashboard
+
+### Chinook Sales Dashboard
+
+An interactive Power BI dashboard was built to complement the SQL analysis and visualize key business insights.
+
+### 🔹 Key Insights:
+- Revenue trend over time (2009–2013)
+- Top countries contributing to revenue
+- Genre-wise revenue distribution
+- Top customers by revenue
+- KPI metrics (Total Revenue, Profit, Customers, AOV)
+
+### 📸 Dashboard Preview:
+![Dashboard](Dashboard.png)
+
+### 📁 Files Included:
+- Chinook-Sales-Dashboard.pbix
+- Dashboard.png
+- KPIs.png
+- Trend Line.png
+- Top customers.png
+
+### 🛠 Tools Used:
+- SQL
+- Power BI
+- DAX
+- Data Modeling
+
 
 ## Conclusion
 
-This project demonstrates practical application of SQL concepts using a structured relational database. The analysis covers data exploration, aggregation, JOIN operations, subqueries, window functions, and time-based revenue analysis to extract meaningful business insights from sales data. Through this work, a strong understanding of relational data handling and analytical querying has been developed, forming a solid foundation for further growth in data analytics and database management.
+This project demonstrates an end-to-end data analysis workflow combining SQL and Power BI. SQL was used for data extraction, transformation, and analytical querying, while Power BI was used to build an interactive dashboard for visualizing key business insights.
+
+The analysis provided insights into revenue trends, customer behavior, genre performance, and regional contributions. By integrating both SQL and visualization tools, the project highlights the ability to convert raw data into meaningful insights that support data-driven decision-making.
+
+Overall, this project reflects strong foundational skills in data analysis, data modeling, and business intelligence.
